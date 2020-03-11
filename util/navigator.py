@@ -1,37 +1,13 @@
 import sys
 import json
 
-import pydent
-from pydent import AqSession
+from util.pydent_helper import create_session
 
 class Navigator():
 
-    def __init__(self, config_path='./', instance='nursery'):
-        self.set_session(config_path, instance)
-
-    def set_session(self, config_path, instance):
-        """
-        Creates a session to be used by the Navigator.
-
-        Arguments:
-        config_path (string): path to a json file that has valid credentials
-        instance (string): specifies which Aq instance to use
-        """
-        with open('secrets.json') as f:
-            secrets = json.load(f)
-
-        credentials = secrets[instance]
-        session = AqSession(
-            credentials["login"],
-            credentials["password"],
-            credentials["aquarium_url"]
-        )
-
-        # Test the session
-        me = session.User.where({'login': credentials['login']})[0]
-        print('Logged in as %s\n' % me.name)
-
-        self.session = session
+    def __init__(self, aq_instance):
+        self.aq_instance = aq_instance
+        self.session = create_session(aq_instance)        
 
     def output_fvs(self, item_id):
         """

@@ -1,6 +1,6 @@
 import pydent
 from pydent import AqSession, __version__
-from secrets_helper import get_secrets
+from util.secrets_helper import get_secrets
 
 prettyprint = lambda x: json.dumps(x, indent=4, sort_keys=True)
 
@@ -28,3 +28,9 @@ def create_session(aq_instance):
     print('Logged in as {}\n'.format(me.name))
 
     return session
+    
+def list_methods(obj):
+    print("Methods available in {}".format(obj.__class__.__name__))
+    for d in dir(obj):
+        if not d.startswith('_'):
+            print(d)

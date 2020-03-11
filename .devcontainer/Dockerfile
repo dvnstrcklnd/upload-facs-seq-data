@@ -58,7 +58,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     #
     # Added by Devin Strickland, University of Washinton
-    # Install pydent (Aquarium) and agavepy (TACC)
+    # Install pytz, pydent (Aquarium), and agavepy (TACC)
+    && pip install pytz \
     && pip install pydent \
     && pip install agavepy==1.0.0a4
 

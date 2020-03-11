@@ -1,0 +1,10 @@
+aq_item_id,strain,protease,concentration,sort_job,facs_filename_stub,frac_positive,sort_count
+451402,Hugh Sept 2019,Trypsin,0,Job_115126,Tube - 5,0.0542,650400
+444982,Hugh Sept 2019,Chymotrypsin,28,Job_115126,Tube - 6,0.0346,415200
+444983,Hugh Sept 2019,Trypsin,28,Job_115126,Tube - 7,0.0174,208800
+444984,Hugh Sept 2019,Chymotrypsin,83,Job_115126,Tube - 8,0.0356,427200
+444985,Hugh Sept 2019,Trypsin,83,Job_115126,Tube - 9,0.0146,175200
+444986,EBY100 + PETCONv3_baker,Trypsin,0,Job_115126,Tube - 1,,
+444987,AMA1-best,Trypsin,0,Job_115126,Tube - 2,,
+444988,AMA1-best,Chymotrypsin,250,Job_115126,Tube - 3,,
+444989,AMA1-best,Trypsin,250,Job_115126,Tube - 4,,
